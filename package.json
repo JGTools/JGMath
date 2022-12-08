@@ -2,6 +2,7 @@
   "name": "@jgtools/jgmath",
   "version": "1.0.0",
   "description": "JGMath - Math utils",
+  "type":"module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
