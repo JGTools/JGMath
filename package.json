@@ -1,8 +1,8 @@
 {
   "name": "@jgtools/jgmath",
-  "version": "1.0.1",
-  "description": "JGMath - Math utils",
-  "type":"module",
+  "version": "1.0.2",
+  "description": "Math utils",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -12,11 +12,17 @@
     "type": "git",
     "url": "git+https://github.com/JGTools/JGMath.git"
   },
-  "keywords": ["javascript","typescript"],
+  "keywords": [
+    "javascript",
+    "typescript"
+  ],
   "author": "Erik1001",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JGTools/JGMath/issues"
   },
-  "homepage": "https://github.com/JGTools/JGMath#readme"
+  "homepage": "https://github.com/JGTools/JGMath#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
 }
