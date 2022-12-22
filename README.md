@@ -19,6 +19,7 @@ npm i @jgtools/jgmath
 import * as JGMath from "@jgtools/jgmath";
 // or import functions individually
 import { getAngle } from "@jgtools/jgmath";
+// ...
 ```
 
 ### Using cdn
@@ -26,9 +27,9 @@ import { getAngle } from "@jgtools/jgmath";
 ```html
 <script type="module">
     // import all functions using a namespace
-    import * as JGMath from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.2/dist/index.min.js";
+    import * as JGMath from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.3/dist/index.min.js";
     // or import functions individually
-    import { getAngle } from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.2/dist/index.min.js";
+    import { getAngle } from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.3/dist/index.min.js";
     // ...
 </script>
 ```

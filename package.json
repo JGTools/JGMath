@@ -1,6 +1,6 @@
 {
   "name": "@jgtools/jgmath",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Math utils",
   "type": "module",
   "main": "dist/index.js",
