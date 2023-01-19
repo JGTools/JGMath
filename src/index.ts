@@ -46,3 +46,14 @@ export function lineCircleCol(a: V2, b: V2, c: V2, r: number): boolean {
 export function isOutsideSquare(pos: V2, size: number): boolean {
     return pos.x > size || pos.x < 0 || pos.y > size || pos.y < 0;
 }
+/**
+ * Converts a hex color to rgb
+ * @param color Color in hex
+ * @returns [r, g, b] in range 0-255
+ */
+export function toRGB(color: number): [number, number, number] {
+    const r = (color & 0xff0000) >> 16;
+    const g = (color & 0x00ff00) >> 8;
+    const b = color & 0x0000ff;
+    return [r, g, b];
+}
