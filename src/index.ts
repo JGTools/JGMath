@@ -53,7 +53,14 @@ export function getClosestPointOnLine(a: V2, b: V2, c: V2): V2 {
     const px = dx * dp;
     const py = dy * dp;
 
-    return { x: a.x + px, y: a.y + py };
+    const lowX = Math.min(a.x, b.x);
+    const highX = Math.max(a.x, b.x);
+    const lowY = Math.min(a.y, b.y);
+    const highY = Math.max(a.y, b.y);
+    const x = Math.max(lowX, Math.min(highX, a.x + px));
+    const y = Math.max(lowY, Math.min(highY, a.y + py));
+
+    return { x, y };
 }
 
 export function isOutsideSquare(pos: V2, size: number): boolean {

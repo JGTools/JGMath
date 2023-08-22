@@ -27,9 +27,9 @@ import { getAngle } from "@jgtools/jgmath";
 ```html
 <script type="module">
     // import all functions using a namespace
-    import * as JGMath from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.6/dist/index.min.js";
+    import * as JGMath from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.7/dist/index.min.js";
     // or import functions individually
-    import { getAngle } from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.6/dist/index.min.js";
+    import { getAngle } from "https://cdn.jsdelivr.net/npm/@jgtools/jgmath@1.0.7/dist/index.min.js";
     // ...
 </script>
 ```
