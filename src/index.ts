@@ -33,19 +33,7 @@ export function pointCircleCol(p1: V2, p2: V2, r: number): boolean {
 export function lineCircleCol(a: V2, b: V2, c: V2, r: number): boolean {
     if (pointCircleCol(a, c, r) || pointCircleCol(b, c, r))
         return true;
-    const dx = b.x - a.x;
-    const dy = b.y - a.y;
-    const lcx = c.x - a.x;
-    const lcy = c.y - a.y;
-
-    const dl2 = dx * dx + dy * dy;
-    const dp = (dl2 > 0) ? (lcx * dx + lcy * dy) / dl2 : 1;
-    const px = dx * dp;
-    const py = dy * dp;
-
-    const nearest = { x: a.x + px, y: a.y + py };
-    const pl2 = px * px + py * py;
-    return pointCircleCol(nearest, c, r) && pl2 <= dl2 && (px * dx + py * dy) >= 0;
+    return pointCircleCol(getClosestPointOnLine(a, b, c), c, r);
 }
 
 /**
