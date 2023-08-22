@@ -16,9 +16,13 @@ export function getDst2(p1: V2, p2: V2): number {
     const dy = p2.y - p1.y;
     return dx * dx + dy * dy;
 }
+export function getDst(p1: V2, p2: V2): number {
+    return getDst2(p1, p2) ** 0.5;
+}
 export function pointCircleCol(p1: V2, p2: V2, r: number): boolean {
     return getDst2(p1, p2) < r * r;
 }
+
 /**
  * @param {V2} a Pos for the start of the line
  * @param {V2} b Pos for the end of the line
@@ -43,6 +47,27 @@ export function lineCircleCol(a: V2, b: V2, c: V2, r: number): boolean {
     const pl2 = px * px + py * py;
     return pointCircleCol(nearest, c, r) && pl2 <= dl2 && (px * dx + py * dy) >= 0;
 }
+
+/**
+ * @param {V2} a Pos for the start of the line
+ * @param {V2} b Pos for the end of the line
+ * @param {V2} c Pos of the point
+ * @returns {boolean} Pos on the line a-b closest to c
+ */
+export function getClosestPointOnLine(a: V2, b: V2, c: V2): V2 {
+    const dx = b.x - a.x;
+    const dy = b.y - a.y;
+    const lcx = c.x - a.x;
+    const lcy = c.y - a.y;
+
+    const dl2 = dx * dx + dy * dy;
+    const dp = (dl2 > 0) ? (lcx * dx + lcy * dy) / dl2 : 1;
+    const px = dx * dp;
+    const py = dy * dp;
+
+    return { x: a.x + px, y: a.y + py };
+}
+
 export function isOutsideSquare(pos: V2, size: number): boolean {
     return pos.x > size || pos.x < 0 || pos.y > size || pos.y < 0;
 }
